@@ -44,5 +44,10 @@ OH_MY_DOTFILES_SHELL="$(brew --prefix)/bin/zsh"
 sudo sh -c "echo $OH_MY_DOTFILES_SHELL >> /etc/shells"
 chsh -s $OH_MY_DOTFILES_SHELL
 
+# Setup Node
+echo "Setting up Node..."
+nvm install --lts
+nvm use --lts
+
 echo "Mac setup completed."
 read -p "Press [Enter] to exit"
