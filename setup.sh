@@ -15,5 +15,20 @@ else
     echo "Xcode Command Line Tools already installed."
 fi
 
+# Homebrew Installation: Install Homebrew if not already installed.
+echo "Checking for Homebrew..."
+if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing Homebrew..."
+    /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    echo "Homebrew already installed."
+fi
+
+# Update and Upgrade Homebrew: Ensure Homebrew is up-to-date.
+echo "Updating and Upgrading Homebrew..."
+brew update
+brew upgrade
+
 echo "Mac setup completed."
 read -p "Press [Enter] to exit"
