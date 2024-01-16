@@ -11,8 +11,14 @@ echo "Checking for Xcode Command Line Tools..."
 if ! xcode-select -p >/dev/null 2>&1; then
     echo "Installing Xcode Command Line Tools..."
     xcode-select --install
+    read -p "Press [Enter] after installation is finished to continue"
 else
     echo "Xcode Command Line Tools already installed."
+fi
+
+if ! git -v >/dev/null 2>&1; then
+    echo "Wait for the Xcode-select install to finish before continuing."
+    exit 1
 fi
 
 # Check Curl instalation
