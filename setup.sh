@@ -49,5 +49,11 @@ echo "Setting up Node..."
 nvm install --lts
 nvm use --lts
 
+# Linking dotfiles
+echo "Setting up SSH..."
+OH_MY_DOTFILES_SSH="~/.ssh"
+mkdir -p $OH_MY_DOTFILES_SSH
+ln -s $OH_MY_DOTFILES_PATH/config/ssh/config $OH_MY_DOTFILES_SSH/config
+
 echo "Mac setup completed."
 read -p "Press [Enter] to exit"
