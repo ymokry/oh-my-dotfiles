@@ -30,6 +30,17 @@ echo "Updating and Upgrading Homebrew..."
 brew update
 brew upgrade
 
+# Setup ZSH shell
+echo "Setting up ZSH shell..."
+brew install zsh
+OH_MY_DOTFILES_SHELL="$(brew --prefix)/bin/zsh"
+sudo sh -c "echo $OH_MY_DOTFILES_SHELL >> /etc/shells"
+chsh -s $OH_MY_DOTFILES_SHELL
+
+# Install Oh My ZSH
+echo "Setting up Oh My ZSH..."
+/bin/sh -c "$(curl -fsSL http://install.ohmyz.sh)"
+
 # Core Applications Installation: Install essential applications using Homebrew.
 echo "Installing core applications..."
 brew bundle install --no-lock
@@ -37,12 +48,6 @@ brew bundle install --no-lock
 # Clean up.
 echo "Running brew cleanup..."
 brew cleanup
-
-# Setup shell
-echo "Setting up ZSH shell..."
-OH_MY_DOTFILES_SHELL="$(brew --prefix)/bin/zsh"
-sudo sh -c "echo $OH_MY_DOTFILES_SHELL >> /etc/shells"
-chsh -s $OH_MY_DOTFILES_SHELL
 
 # Setup Node
 echo "Setting up Node..."
