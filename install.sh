@@ -1,17 +1,31 @@
 #!/usr/bin/env sh
 
-echo "Clonning Oh My Dotfiles..."
+echo "Installing Oh My Dotfiles..."
 
-if ! command -v git >/dev/null 2>&1; then
-    echo "Git not found, install to continue."
-    exit 1
+# Request and keep the administrator password active.
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# XCode Command Line Tools: Install if not already present.
+echo "Checking for Xcode Command Line Tools..."
+if ! xcode-select -p >/dev/null 2>&1; then
+    echo "Installing Xcode Command Line Tools..."
+    xcode-select --install
+else
+    echo "Xcode Command Line Tools already installed."
 fi
 
+# Check Curl instalation
+echo "Checking for Curl..."
 if ! command -v curl >/dev/null 2>&1; then
-    echo "Git not found, install to continue."
+    echo "Curl not found, install to continue."
     exit 1
+else
+    echo "Curl already installed."
 fi
 
+# Cloning Oh My Dotfiles
+echo "Cloning Oh My Dotfiles repository..."
 OH_MY_DOTFILES_NAME="oh-my-dotfiles"
 OH_MY_DOTFILES_REPO="ymokry/$OH_MY_DOTFILES_NAME"
 export OH_MY_DOTFILES_PATH="$HOME/.$OH_MY_DOTFILES_NAME"
