@@ -30,5 +30,13 @@ echo "Updating and Upgrading Homebrew..."
 brew update
 brew upgrade
 
+# Core Applications Installation: Install essential applications using Homebrew.
+echo "Installing core applications..."
+brew bundle install --no-lock
+
+# Clean up.
+echo "Running brew cleanup..."
+brew cleanup
+
 echo "Mac setup completed."
 read -p "Press [Enter] to exit"

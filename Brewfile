@@ -1,0 +1,20 @@
+tap 'homebrew/cask-fonts'
+tap 'oven-sh/bun'
+
+brew 'bun'
+brew 'coreutils'
+brew 'findutils'
+brew 'nvm'
+brew 'zsh'
+brew 'zsh-syntax-highlighting'
+
+cask 'font-fira-code'
+
+cask '1password'
+cask 'cleanmymac'
+cask 'cleanshot'
+cask 'deepl'
+cask 'docker'
+cask 'google-chrome'
+cask 'spotify'
+cask 'telegram'
