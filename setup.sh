@@ -38,5 +38,11 @@ brew bundle install --no-lock
 echo "Running brew cleanup..."
 brew cleanup
 
+# Setup shell
+echo "Setting up ZSH shell..."
+OH_MY_DOTFILES_SHELL="$(brew --prefix)/bin/zsh"
+sudo sh -c "echo $OH_MY_DOTFILES_SHELL >> /etc/shells"
+chsh -s $OH_MY_DOTFILES_SHELL
+
 echo "Mac setup completed."
 read -p "Press [Enter] to exit"
