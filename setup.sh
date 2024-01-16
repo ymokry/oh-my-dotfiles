@@ -26,7 +26,7 @@ chsh -s $OH_MY_DOTFILES_SHELL
 
 # Install Oh My ZSH
 echo "Setting up Oh My ZSH..."
-/bin/sh -c "$(curl -fsSL http://install.ohmyz.sh)"
+RUNZSH=no /bin/sh -c "$(curl -fsSL http://install.ohmyz.sh)"
 
 # Core Applications Installation: Install essential applications using Homebrew.
 echo "Installing core applications..."
