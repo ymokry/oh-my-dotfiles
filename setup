@@ -9,10 +9,11 @@ OMC="$HOME/$OMC_REPO_NAME"
 # Include shared helpers
 source $OMC/_utils/shared.sh
 source $OMC/_utils/setup.sh
+source $OMC/_utils/stow.sh
 
 # Run setup on first installation
 if check_setup_flag; then
-    local OMC_SETUP_SCRIPT="$OMC/_setup/$(get_host).sh"
+    OMC_SETUP_SCRIPT="$OMC/_setup/$(get_host).sh"
 
     if [ -f "$OMC_SETUP_SCRIPT" ]; then
         source $OMC_SETUP_SCRIPT
@@ -20,3 +21,36 @@ if check_setup_flag; then
 
     create_setup_flag
 fi
+
+# List of directories to be synced
+# with all users, including root
+base=(
+)
+
+# Local user
+user=(
+)
+
+# GUI app configs
+gui=(
+)
+
+say "Linking configs for '$USER'"
+
+for base_item in ${base[@]}; do
+    link_config $HOME $base_item
+done
+
+if ! is_root_user; then
+    for uset_item in ${user[@]}; do
+        link_config $HOME $uset_item
+    done
+
+    if is_gui_env; then
+        for gui_item in ${gui[@]}; do
+            link_config $HOME $gui_item
+        done
+    fi
+fi
+
+say "Done"

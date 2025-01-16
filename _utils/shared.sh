@@ -22,3 +22,19 @@ get_host() {
         err "Unknown host detected"
     fi
 }
+
+is_root_user() {
+    if [[ ! "$(whoami)" = *"root"* ]]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
+is_gui_env() {
+    if [ "$(get_host)" != "machine" ]; then
+        return 1
+    else
+        return 0
+    fi
+}
