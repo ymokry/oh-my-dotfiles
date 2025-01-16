@@ -33,6 +33,7 @@ user=(
 
 # GUI app configs
 gui=(
+    ghostty
 )
 
 say "Linking configs for '$USER'"

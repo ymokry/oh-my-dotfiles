@@ -1,0 +1,21 @@
+theme = tokyonight_night
+
+# Font settings
+font-family = FiraCode Nerd Font Mono
+font-size = 16
+font-thicken = true
+adjust-cell-height = 12.5%
+
+# Title bar
+title = " "
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+
+# Window
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+
+# Other
+shell-integration-features = no-cursor,sudo,no-title
+desktop-notifications = false
