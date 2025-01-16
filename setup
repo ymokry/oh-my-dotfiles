@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Exit on any error
+set -e
+
+# Include shared helpers
+source _utils/shared.sh
+
+say "Hello world!"
