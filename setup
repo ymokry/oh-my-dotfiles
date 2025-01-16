@@ -25,6 +25,7 @@ fi
 # List of directories to be synced
 # with all users, including root
 base=(
+    zsh
 )
 
 # Local user
