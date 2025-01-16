@@ -1,0 +1,13 @@
+# Node
+npm-debug.log
+node_modules
+
+# VsCode
+.vscode
+
+# General
+log
+*.log
+.DS_Store
+.vscode
+knip.json

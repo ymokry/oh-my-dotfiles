@@ -1,0 +1,34 @@
+[user]
+    name = Yauheni Mokry
+    # TODO: Replace with generic git@
+    email = github@sl.mokry.me
+
+[commit]
+    gpgsign = true
+
+[tag]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/.gitsign
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[init]
+    defaultBranch = main
+
+[core]
+    # TODO: Replace with cli editor
+    editor = code --wait
+    excludesfile = ~/.config/git/.gitignore
+
+[pull]
+    rebase = true
+
+[include]
+    path = ~/.config/git/.gitconfig.github
+
+[includeIf "gitdir:~/Developer/playgon/"]
+    path = ~/.config/git/.gitconfig.playgon

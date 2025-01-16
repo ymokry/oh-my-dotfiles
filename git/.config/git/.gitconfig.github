@@ -1,0 +1,5 @@
+[user]
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ5gJ6XBbRYED4dd5QwSBUhzJtdZ/o2l7sdO0QOgu9nj
+
+[github]
+    user = ymokry

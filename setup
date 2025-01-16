@@ -29,6 +29,7 @@ base=(
 
 # Local user
 user=(
+    git
 )
 
 # GUI app configs

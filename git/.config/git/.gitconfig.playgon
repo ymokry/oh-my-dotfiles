@@ -1,0 +1,6 @@
+[user]
+    email = yauhenim@playgon.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKpqk/Jq8aWTfn5AvoL1bMlmhLl+Pdk76J5uTCtIMZsq
+
+[bitbucket]
+    user = yauheni_mokry
