@@ -3,7 +3,20 @@
 # Exit on any error
 set -e
 
-# Include shared helpers
-source _utils/shared.sh
+OMC_REPO_NAME=".oh-my-dotfiles"
+OMC="$HOME/$OMC_REPO_NAME"
 
-say "Hello world!"
+# Include shared helpers
+source $OMC/_utils/shared.sh
+source $OMC/_utils/setup.sh
+
+# Run setup on first installation
+if check_setup_flag; then
+    local OMC_SETUP_SCRIPT="$OMC/_setup/$(get_host).sh"
+
+    if [ -f "$OMC_SETUP_SCRIPT" ]; then
+        source $OMC_SETUP_SCRIPT
+    fi
+
+    create_setup_flag
+fi
