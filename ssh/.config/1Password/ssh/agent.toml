@@ -1,0 +1,16 @@
+# This is the 1Password SSH agent config file, which allows you to customize the
+# behavior of the SSH agent running on this machine.
+#
+#  https://developer.1password.com/docs/ssh/agent/config
+
+[[ssh-keys]]
+vault = "Private"
+item = "GitHub.com SSH"
+
+[[ssh-keys]]
+vault = "Playgon"
+item = "PLG Bitbucket SSH"
+
+[[ssh-keys]]
+vault = "Satellite"
+item = "STL SSH Key"
