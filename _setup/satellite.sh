@@ -1,5 +1,5 @@
 _setup() {
-    source $OMC/_utils/shared.sh
+    source $OMD/_utils/shared.sh
 
     say "Satellite setup"
 }

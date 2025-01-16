@@ -3,20 +3,20 @@
 # Exit on any error
 set -e
 
-OMC_REPO_NAME=".oh-my-dotfiles"
-OMC="$HOME/$OMC_REPO_NAME"
+OMD_REPO_NAME=".oh-my-dotfiles"
+OMD="$HOME/$OMD_REPO_NAME"
 
 # Include shared helpers
-source $OMC/_utils/shared.sh
-source $OMC/_utils/setup.sh
-source $OMC/_utils/stow.sh
+source $OMD/_utils/shared.sh
+source $OMD/_utils/setup.sh
+source $OMD/_utils/stow.sh
 
 # Run setup on first installation
 if check_setup_flag; then
-    OMC_SETUP_SCRIPT="$OMC/_setup/$(get_host).sh"
+    OMD_SETUP_SCRIPT="$OMD/_setup/$(get_host).sh"
 
-    if [ -f "$OMC_SETUP_SCRIPT" ]; then
-        source $OMC_SETUP_SCRIPT
+    if [ -f "$OMD_SETUP_SCRIPT" ]; then
+        source $OMD_SETUP_SCRIPT
     fi
 
     create_setup_flag

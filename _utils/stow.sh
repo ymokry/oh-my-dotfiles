@@ -1,4 +1,4 @@
-source $OMC/_utils/shared.sh
+source $OMD/_utils/shared.sh
 
 link_config() {
     if ! command -v stow > /dev/null 2>&1; then
