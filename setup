@@ -3,8 +3,7 @@
 # Exit on any error
 set -e
 
-OMD_REPO_NAME=".oh-my-dotfiles"
-OMD="$HOME/$OMD_REPO_NAME"
+OMD="${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-dotfiles"
 
 # Include shared helpers
 source $OMD/_utils/shared.sh
