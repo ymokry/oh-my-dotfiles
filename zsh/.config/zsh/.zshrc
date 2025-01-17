@@ -11,6 +11,8 @@ autoload -Uz compinit && compinit
 
 # History
 source $ZSH_CONFIG/modules/history.zsh
+# Syntax highlighting
+source $ZSH_CONFIG/modules/syntax-highlighting.zsh
 # Suggestions for unknown commands
 source $ZSH_CONFIG/modules/cnf.zsh
 # Completions for Fast Node Manager
