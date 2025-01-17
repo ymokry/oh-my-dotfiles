@@ -11,16 +11,23 @@ if [[ -f "/opt/homebrew/bin/brew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Plugins
+# Enable lazy loading
 source $ZSH_CONFIG/plugins/zsh-defer/zsh-defer.plugin.zsh
 
-# Modules
+# Base Modules
 source $ZSH_CONFIG/modules/history.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/completions.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/auto-suggestions.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/syntax-highlighting.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/command-not-found.module.zsh
+
+# Plugins
+zsh-defer source $ZSH_CONFIG/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+# Shell integrations
 zsh-defer source $ZSH_CONFIG/modules/fast-node-manager.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/command-not-found.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/fuzzy-finder.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/zoxide.zsh
 
 source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
