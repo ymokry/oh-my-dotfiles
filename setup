@@ -29,15 +29,16 @@ git submodule update
 # List of directories to be synced
 # with all users, including root
 base=(
-    zsh
-    oh-my-posh
     bin
+    lazygit
+    oh-my-posh
+    zsh
 )
 
 # Local user
 user=(
-    ssh
     git
+    ssh
 )
 
 # GUI app configs
