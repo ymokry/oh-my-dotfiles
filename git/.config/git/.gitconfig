@@ -22,7 +22,18 @@
 [core]
     # TODO: Replace with cli editor
     editor = code --wait
+    pager = delta
     excludesfile = ~/.config/git/.gitignore
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+
+[merge]
+    conflictstyle = zdiff3
 
 [pull]
     rebase = true
