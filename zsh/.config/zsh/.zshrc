@@ -4,6 +4,8 @@
 # Referenced by other modules
 ZSH_CONFIG="$HOME/.config/zsh"
 
+source $ZSH_CONFIG/env.zsh
+
 # Brew
 if [[ -f "/opt/homebrew/bin/brew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -20,7 +22,6 @@ zsh-defer source $ZSH_CONFIG/modules/syntax-highlighting.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/command-not-found.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/fast-node-manager.module.zsh
 
-# Styles
 source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
 source $ZSH_CONFIG/aliases.zsh
