@@ -3,43 +3,21 @@
     # TODO: Replace with generic git@
     email = github@sl.mokry.me
 
-[commit]
-    gpgsign = true
-
-[tag]
-    gpgsign = true
-
-[gpg]
-    format = ssh
-
-[gpg "ssh"]
-    allowedSignersFile = ~/.config/git/.gitsign
-    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-
 [init]
     defaultBranch = main
 
 [core]
     # TODO: Replace with cli editor
     editor = code --wait
-    pager = delta
     excludesfile = ~/.config/git/.gitignore
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true
-    dark = true
-
-[merge]
-    conflictstyle = zdiff3
 
 [pull]
     rebase = true
 
 [include]
-    path = ~/.config/git/.gitconfig.github
+    path = ~/.config/git/github.gitconfig
+    path = ~/.config/git/pager.gitconfig
+    path = ~/.config/git/sign.gitconfig
 
 [includeIf "gitdir:~/Developer/playgon/"]
-    path = ~/.config/git/.gitconfig.playgon
+    path = ~/.config/git/playgon.gitconfig
