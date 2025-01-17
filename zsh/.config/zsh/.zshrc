@@ -6,11 +6,10 @@ if [[ -f "/opt/homebrew/bin/brew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Load completions
-autoload -Uz compinit && compinit
-
 # History
 source $ZSH_CONFIG/modules/history.zsh
+# Completions
+source $ZSH_CONFIG/modules/completions.zsh
 # Syntax highlighting
 source $ZSH_CONFIG/modules/syntax-highlighting.zsh
 # Suggestions for unknown commands
