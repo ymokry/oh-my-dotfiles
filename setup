@@ -22,6 +22,11 @@ if check_setup_flag; then
     create_setup_flag
 fi
 
+# Make sure all submodules
+# are pulled and updated
+git submodule init
+git submodule update
+
 # List of directories to be synced
 # with all users, including root
 base=(
