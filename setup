@@ -30,6 +30,7 @@ git submodule update
 # with all users, including root
 base=(
     zsh
+    bin
 )
 
 # Local user
