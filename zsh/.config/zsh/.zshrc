@@ -34,5 +34,9 @@ source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
 source $ZSH_CONFIG/aliases.zsh
 
+# Always keep at the very bottom
+# No lazy loading to avoid blinking
+source $ZSH_CONFIG/modules/oh-my-posh.module.zsh
+
 # Uncomment to measure performance
 # zprof
