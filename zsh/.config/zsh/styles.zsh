@@ -2,10 +2,15 @@
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # Colored completions
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-# Force zsh not to show completion menu, which allows 
-# fzf-tab to capture the unambiguous prefix
+# Set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# Disable sorting for `git checkout` completion
+zstyle ':completion:*:git-checkout:*' sort false
+# Disable default completion menu, so 'fzf-tab'
+# can capture the unambiguous prefix
 zstyle ':completion:*' menu no
-# Preview directory's content with ls when completing cd
+# Preview directory's content when using cd and zoxide
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-# Preview directory's content with ls when completing zoxide
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+# To make 'fzf-tab' follow $FZF_DEFAULT_OPTS
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
