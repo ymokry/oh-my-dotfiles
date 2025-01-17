@@ -1,3 +1,6 @@
+# Uncomment to measure performance
+# zmodload zsh/zprof
+
 # Referenced by other modules
 ZSH_CONFIG="$HOME/.config/zsh"
 
@@ -30,3 +33,6 @@ source $ZSH_CONFIG/keybindings.zsh
 
 # Aliases
 source $ZSH_CONFIG/aliases.zsh
+
+# Uncomment to measure performance
+# zprof
