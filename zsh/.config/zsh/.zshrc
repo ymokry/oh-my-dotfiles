@@ -28,6 +28,7 @@ zsh-defer source $ZSH_CONFIG/modules/fast-node-manager.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/command-not-found.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/fuzzy-finder.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/zoxide.zsh
+zsh-defer source $ZSH_CONFIG/modules/bun.zsh
 
 source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
