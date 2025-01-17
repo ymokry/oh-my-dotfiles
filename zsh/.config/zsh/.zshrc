@@ -17,3 +17,6 @@ source $ZSH_CONFIG/modules/syntax-highlighting.zsh
 source $ZSH_CONFIG/modules/cnf.zsh
 # Completions for Fast Node Manager
 source $ZSH_CONFIG/modules/fnm.zsh
+
+# Aliases
+source $ZSH_CONFIG/aliases.zsh
