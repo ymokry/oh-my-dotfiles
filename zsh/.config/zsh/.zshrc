@@ -13,3 +13,5 @@ autoload -Uz compinit && compinit
 source $ZSH_CONFIG/modules/history.zsh
 # Suggestions for unknown commands
 source $ZSH_CONFIG/modules/cnf.zsh
+# Completions for Fast Node Manager
+source $ZSH_CONFIG/modules/fnm.zsh
