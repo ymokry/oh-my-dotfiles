@@ -9,5 +9,7 @@ fi
 # Load completions
 autoload -Uz compinit && compinit
 
-# Modules
+# History
 source $ZSH_CONFIG/modules/history.zsh
+# Suggestions for unknown commands
+source $ZSH_CONFIG/modules/cnf.zsh
