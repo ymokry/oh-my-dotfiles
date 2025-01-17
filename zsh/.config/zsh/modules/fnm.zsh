@@ -1,4 +1,4 @@
-function fnm_init() {
+function _init_fnm() {
     if (( $+commands[fnm] )); then
         # Expose fnm envs
         eval "$(fnm env --use-on-cd --shell zsh)"
@@ -8,7 +8,7 @@ function fnm_init() {
             eval "$(fnm completions --shell zsh)"
         fi
     fi
-    unfunction fnm_init
+    unfunction _init_fnm
 }
 
-fnm_init
+_init_fnm
