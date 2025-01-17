@@ -6,10 +6,9 @@ ZSH_CONFIG="$HOME/.config/zsh"
 
 source $ZSH_CONFIG/env.zsh
 
-# Brew
-if [[ -f "/opt/homebrew/bin/brew" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+# Keep on top because other modules
+# rely on brew dependencies
+source $ZSH_CONFIG/modules/brew.module.zsh
 
 # Enable lazy loading
 source $ZSH_CONFIG/plugins/zsh-defer/zsh-defer.plugin.zsh
