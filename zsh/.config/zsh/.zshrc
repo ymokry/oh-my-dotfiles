@@ -1,41 +1,51 @@
 # Uncomment to measure performance
 # zmodload zsh/zprof
 
-# Referenced by other modules
+# Source envs on top as they may be
+# referenced by other modules
 ZSH_CONFIG="$HOME/.config/zsh"
-
 source $ZSH_CONFIG/env.zsh
 
 # Keep on top because other modules
-# rely on brew dependencies
+# may rely on brew formulae
 source $ZSH_CONFIG/modules/brew.module.zsh
 
-# Enable lazy loading
+# Keep above all the lazy-loaded modules
 source $ZSH_CONFIG/plugins/zsh-defer/zsh-defer.plugin.zsh
 
-# Base Modules
+# Have no idea when to do that
 source $ZSH_CONFIG/modules/history.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/completions.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/auto-suggestions.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/syntax-highlighting.module.zsh
 
-# Plugins
-zsh-defer source $ZSH_CONFIG/plugins/fzf-tab/fzf-tab.plugin.zsh
-
-# Shell integrations
-zsh-defer source $ZSH_CONFIG/modules/fnm.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/cnf.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/fzf.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/zoxide.module.zsh
-zsh-defer source $ZSH_CONFIG/modules/bun.module.zsh
-
+# Apply custom stuff when nothing else
+# is left to do before lazy loading
 source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
 source $ZSH_CONFIG/aliases.zsh
 
-# Always keep at the very bottom
-# No lazy loading to avoid blinking
+# Always keep the last
+# in the sync load sequence
 source $ZSH_CONFIG/modules/oh-my-posh.module.zsh
+
+# Lazy modules start here
+# 'compinit' has the highest priority
+zsh-defer source $ZSH_CONFIG/modules/completions.module.zsh
+
+# As per docs 'fzf' should be loaded
+# after completions and before styling
+zsh-defer source $ZSH_CONFIG/modules/fzf.module.zsh
+zsh-defer source $ZSH_CONFIG/plugins/fzf-tab/fzf-tab.plugin.zsh
+
+# Shell integrations and initializations,
+# there's no particular order
+zsh-defer source $ZSH_CONFIG/modules/cnf.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/fnm.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/zoxide.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/bun.module.zsh
+
+# Do suggestions and syntax highlighting
+# when there's nothing else to be done
+zsh-defer source $ZSH_CONFIG/modules/auto-suggestions.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/syntax-highlighting.module.zsh
 
 # Uncomment to measure performance
 # zprof
