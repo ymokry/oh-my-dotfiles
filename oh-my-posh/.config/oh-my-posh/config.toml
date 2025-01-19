@@ -177,16 +177,7 @@ version = 3
         style = "plain"
         background = "transparent"
         foreground_templates = [
-            "{{if ge .Code 128}}p:orange{{else}}p:red{{end}}",
-        ]
-        type = "text"
-        template = "{{if gt .Code 0}}{{if ge .Code 128}}{{else}}{{end}}{{end}}"
-
-    [[blocks.segments]]
-        style = "plain"
-        background = "transparent"
-        foreground_templates = [
-            "{{if ge .Ms 1000}}p:orange{{else}}p:green{{end}}",
+            "{{if eq .Code 0}}p:green{{else}}{{if ge .Code 128}}p:orange{{else}}p:red{{end}}{{end}}",
         ]
         type = "executiontime"
         template = "{{if gt .Ms 0}} {{ .FormattedMs }}{{end}}"
