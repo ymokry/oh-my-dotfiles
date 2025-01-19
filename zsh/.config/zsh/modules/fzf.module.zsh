@@ -3,14 +3,20 @@ function _init_fzf() {
         # Apply 'tokyonight_night' color theme
         # https://github.com/folke/tokyonight.nvim/blob/main/extras/fzf/tokyonight_night.sh
         export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-            --preview-window=border-bold
             --layout=reverse
+            --preview-window="border-rounded"
+            --border="rounded"
             --info="right"
-            --color=fg:#c0caf5
+            --prompt="❱ "
+            --marker="◆"
+            --pointer="❱"
+            --separator="─"
+            --scrollbar="┃"
             --color=fg+:#c0caf5
+            --color=fg:#c0caf5
             --color=query:#c0caf5
-            --color=bg:#1a1b26
             --color=bg+:#283457
+            --color=bg:#1a1b26
             --color=gutter:#1a1b26
             --color=hl:#2ac3de
             --color=hl+:#2ac3de

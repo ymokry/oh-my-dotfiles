@@ -14,9 +14,9 @@ macos-titlebar-proxy-icon = hidden
 macos-auto-secure-input = true
 
 # Window
-window-padding-x = 8
-window-padding-y = 8
-window-padding-balance = true
+# window-padding-x = 8
+# window-padding-y = 8
+# window-padding-balance = true
 
 # Other
 term = xterm-256color
