@@ -3,10 +3,12 @@ _setup() {
 
     say "Setting up fresh macOS installation"
 
-    # Install xcode-select
+    # Install 'xcode-select'
     source $SETUP_MODULES/xcode.module.sh
     # Initializing git for dotfiles repository
     source $SETUP_MODULES/git.module.sh
+    # Install 'brew'
+    source $SETUP_MODULES/brew.module.sh
 }
 
 _setup

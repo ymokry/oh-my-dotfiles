@@ -18,6 +18,10 @@ fi
 
 # Run setup on fresh installation
 if check_setup_flag; then
+    # Request and keep the administrator password active.
+    sudo -v
+    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
     OMD_SETUP_SCRIPT="$OMD/_setup/$(get_host).sh"
 
     if [ -f "$OMD_SETUP_SCRIPT" ]; then
