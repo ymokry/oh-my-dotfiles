@@ -10,7 +10,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 # can capture the unambiguous prefix
 zstyle ':completion:*' menu no
 # Preview directory's content when using cd and zoxide
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --all --tree --color=always $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --all --tree --color=always $realpath'
 # To make 'fzf-tab' follow $FZF_DEFAULT_OPTS
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
