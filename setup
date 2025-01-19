@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Exit on any error
-set -e
+set -euo pipefail
 
 OMD="${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-dotfiles"
 OMD_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-dotfiles"
