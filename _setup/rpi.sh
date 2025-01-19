@@ -1,7 +1,7 @@
 _setup() {
     source $OMD/_utils/shared.sh
 
-    say "Machine setup"
+    err "RPI setup is not yet implemented"
 }
 
 _setup

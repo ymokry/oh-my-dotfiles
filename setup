@@ -16,7 +16,7 @@ if [ ! -d "$OMD_CACHE" ]; then
     mkdir -p $OMD_CACHE
 fi
 
-# Run setup on first installation
+# Run setup on fresh installation
 if check_setup_flag; then
     OMD_SETUP_SCRIPT="$OMD/_setup/$(get_host).sh"
 

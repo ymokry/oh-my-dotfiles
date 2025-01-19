@@ -15,9 +15,9 @@ get_host() {
     local os=$(uname)
 
     if [ "$os" = "Darwin" ]; then
-        echo "machine"
+        echo "mac"
     elif [ "$os" = "Linux" ]; then
-        echo "satellite"
+        echo "rpi"
     else
         err "Unknown host detected"
     fi
@@ -32,7 +32,7 @@ is_root_user() {
 }
 
 is_gui_env() {
-    if [ "$(get_host)" != "machine" ]; then
+    if [ "$(get_host)" != "mac" ]; then
         return 1
     else
         return 0

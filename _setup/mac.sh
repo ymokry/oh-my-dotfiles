@@ -1,7 +1,7 @@
 _setup() {
     source $OMD/_utils/shared.sh
 
-    say "Satellite setup"
+    say "Mac setup"
 }
 
 _setup
