@@ -4,11 +4,17 @@
 set -e
 
 OMD="${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-dotfiles"
+OMD_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-dotfiles"
 
 # Include shared helpers
 source $OMD/_utils/shared.sh
 source $OMD/_utils/setup.sh
 source $OMD/_utils/stow.sh
+
+# Check cache directory
+if [ ! -d "$OMD_CACHE" ]; then
+    mkdir -p $OMD_CACHE
+fi
 
 # Run setup on first installation
 if check_setup_flag; then
