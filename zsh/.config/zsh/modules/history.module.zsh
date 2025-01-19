@@ -18,3 +18,6 @@ setopt hist_ignore_dups
 setopt hist_save_no_dups
 # Find no duplicates
 setopt hist_find_no_dups
+
+# Less history
+LESSHISTFILE="$XDG_CACHE_HOME/zsh/.lesshst"
