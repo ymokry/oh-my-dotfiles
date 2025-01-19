@@ -10,6 +10,9 @@ source $ZSH_CONFIG/env.zsh
 # may rely on brew formulae
 source $ZSH_CONFIG/modules/brew.module.zsh
 
+# Check 'zsh' cache before other initializations
+source $ZSH_CONFIG/modules/cache.module.zsh
+
 # Keep above all the lazy-loaded modules
 source $ZSH_CONFIG/plugins/zsh-defer/zsh-defer.plugin.zsh
 

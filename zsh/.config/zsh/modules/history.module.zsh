@@ -1,5 +1,5 @@
 #History
-HISTFILE="$ZSH_CONFIG/.zsh_history"
+HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
 # Size
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE

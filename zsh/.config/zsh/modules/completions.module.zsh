@@ -14,7 +14,7 @@ function _init_completions {
     fi
 
     # Load completions
-    autoload -Uz compinit && compinit
+    autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/.zcompdump
 
     unfunction _init_completions
 }
