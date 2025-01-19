@@ -39,6 +39,7 @@ base=(
     bin
     lazygit
     oh-my-posh
+    tmux
     zsh
 )
 

@@ -1,1 +1,5 @@
+# Secret part of global ENVs
 .secret.zshenv
+
+# Managed by 'tmp'
+tmux/.config/tmux/plugins/
