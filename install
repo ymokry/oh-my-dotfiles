@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+OMD_REPOSITORY="oh-my-dotfiles"
+OMD_REPOSITORY_BRANCH="main"
+OMD_REPOSITORY_ARCHIVE="/tmp/dotfiles.zip"
+OMD_INSTALLATION="${XDG_CONFIG_HOME:-$HOME/.config}/$OMD_REPOSITORY";
+
+# Check installation directory
+if [ ! -d "$OMD_INSTALLATION" ]; then
+    curl -sSf -L "https://github.com/ymokry/$OMD_REPOSITORY/archive/$OMD_REPOSITORY_BRANCH.zip" -o $OMD_REPOSITORY_ARCHIVE
+    unzip -qq $OMD_REPOSITORY_ARCHIVE -d ${XDG_CONFIG_HOME:-$HOME/.config}
+    mv $OMD_INSTALLATION-$OMD_REPOSITORY_BRANCH $OMD_INSTALLATION
+    rm $OMD_REPOSITORY_ARCHIVE
+fi
+
+# Start setup process
+source $OMD_INSTALLATION/setup

@@ -27,49 +27,49 @@ if check_setup_flag; then
     create_setup_flag
 fi
 
-# Make sure all submodules
-# are pulled and updated
-git submodule init
-git submodule update
+# # Make sure all submodules
+# # are pulled and updated
+# git submodule init
+# git submodule update
 
-# List of directories to be synced
-# with all users, including root
-base=(
-    bat
-    bin
-    lazygit
-    oh-my-posh
-    tmux
-    zsh
-)
+# # List of directories to be synced
+# # with all users, including root
+# base=(
+#     bat
+#     bin
+#     lazygit
+#     oh-my-posh
+#     tmux
+#     zsh
+# )
 
-# Local user
-user=(
-    git
-    ssh
-)
+# # Local user
+# user=(
+#     git
+#     ssh
+# )
 
-# GUI app configs
-gui=(
-    ghostty
-)
+# # GUI app configs
+# gui=(
+#     ghostty
+# )
 
-say "Linking configs for '$USER'"
+# say "Linking configs for '$USER'"
 
-for base_item in ${base[@]}; do
-    link_config $HOME $base_item
-done
+# for base_item in ${base[@]}; do
+#     link_config $HOME $base_item
+# done
 
-if ! is_root_user; then
-    for uset_item in ${user[@]}; do
-        link_config $HOME $uset_item
-    done
+# if ! is_root_user; then
+#     for uset_item in ${user[@]}; do
+#         link_config $HOME $uset_item
+#     done
 
-    if is_gui_env; then
-        for gui_item in ${gui[@]}; do
-            link_config $HOME $gui_item
-        done
-    fi
-fi
+#     if is_gui_env; then
+#         for gui_item in ${gui[@]}; do
+#             link_config $HOME $gui_item
+#         done
+#     fi
+# fi
 
-say "Done"
+# say "Done"
