@@ -14,27 +14,35 @@ err() {
 get_host() {
     local os=$(uname)
 
-    if [ "$os" = "Darwin" ]; then
-        echo "mac"
-    elif [ "$os" = "Linux" ]; then
-        echo "rpi"
-    else
-        err "Unknown host detected"
-    fi
+    case "$os" in
+        Darwin)     echo "mac"                  ;;
+        Linux)      echo "rpi"                  ;;
+        *)          err "Unknown host detected" ;;
+    esac
+}
+
+get_package_manager() {
+    local host=$(get_host)
+
+    case "$host" in
+        mac)    echo "brew"                 ;;
+        rpi)    echo "apt"                  ;;
+        *)      err "Unknown host detected" ;;
+    esac
 }
 
 is_root_user() {
-    if [[ ! "$(whoami)" = *"root"* ]]; then
-        return 1
-    else
+    if [[ "$(whoami)" = *"root"* ]]; then
         return 0
+    else
+        return 1
     fi
 }
 
 is_gui_env() {
-    if [ "$(get_host)" != "mac" ]; then
-        return 1
-    else
+    if [ "$(get_host)" = "mac" ]; then
         return 0
+    else
+        return 1
     fi
 }
