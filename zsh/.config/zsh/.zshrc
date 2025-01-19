@@ -4,7 +4,7 @@
 # Source envs on top as they may be
 # referenced by other modules
 ZSH_CONFIG="$HOME/.config/zsh"
-source $ZSH_CONFIG/env.zsh
+source $ZSH_CONFIG/.zshenv
 
 # Keep on top because other modules
 # may rely on brew formulae
