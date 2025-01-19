@@ -21,7 +21,6 @@ source $ZSH_CONFIG/modules/history.module.zsh
 
 # Apply custom stuff when nothing else
 # is left to do before lazy loading
-source $ZSH_CONFIG/styles.zsh
 source $ZSH_CONFIG/keybindings.zsh
 source $ZSH_CONFIG/aliases.zsh
 
