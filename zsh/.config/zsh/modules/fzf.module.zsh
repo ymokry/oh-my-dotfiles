@@ -47,8 +47,11 @@ function _init_fzf() {
             fd --type d --hidden --follow --exclude ".git" . "$1"
         }
 
+        # Reusable function to preview file or directory
+        show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
         # Better previews
-        export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+        export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
         export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head - 200'"
 
         # Advanced customization of 'fzf' options via _fzf_comprun function
@@ -62,7 +65,7 @@ function _init_fzf() {
                 cd)           fzf --preview 'eza --tree --color=always {} | head -200'      "$@" ;;
                 export|unset) fzf --preview "eval 'echo \$'{}"                              "$@" ;;
                 ssh)          fzf --preview 'dig {}'                                        "$@" ;;
-                *)            fzf --preview 'bat -n --color=always --line-range :500 {}'    "$@" ;;
+                *)            fzf --preview '$show_file_or_dir_preview'    "$@" ;;
             esac
         }
 
