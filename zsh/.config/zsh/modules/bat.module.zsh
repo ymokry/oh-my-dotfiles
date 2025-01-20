@@ -15,7 +15,7 @@ function _init_bat {
         fi
 
         # Check if theme is available
-        if ! echo $(bat --list-themes) | grep $theme_name; then
+        if ! bat --list-themes | grep -q $theme_name; then
             bat cache --build
         fi
     fi
