@@ -9,6 +9,13 @@ _setup() {
     source $SETUP_MODULES/git.module.sh
     # Install 'brew'
     source $SETUP_MODULES/brew.module.sh
+    # Sync and install 'brew' dependencies
+    source $SETUP_MODULES/brew-packages.module.sh
+
+
+    # TODO: Configure os defaults
+
+    say "MacOS setup is finished"
 }
 
 _setup

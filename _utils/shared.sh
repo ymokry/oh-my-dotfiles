@@ -11,6 +11,11 @@ err() {
     exit 1
 }
 
+keep_sudo_active() {
+    sudo -v
+    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+}
+
 get_host() {
     local os=$(uname)
 

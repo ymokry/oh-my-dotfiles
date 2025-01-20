@@ -11,9 +11,7 @@ if [[ ! -d "/opt/homebrew" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # Make 'brew' available until zsh config is synced
-    if ! command -v brew &> /dev/null; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 
     say "Brew installation is finished"
 fi

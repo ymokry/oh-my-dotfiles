@@ -1,0 +1,58 @@
+# Required for Bundle installations
+# ref: https://github.com/Homebrew/homebrew-bundle
+tap "homebrew/bundle"
+
+# Ubuntu like suggestions for unknown commands
+# ref: https://github.com/Homebrew/homebrew-command-not-found
+tap "homebrew/command-not-found"
+
+# Formulae
+brew "bat"
+brew "eza"
+brew "fd"
+brew "fnm"
+brew "fzf"
+brew "git"
+brew "git-delta"
+brew "lazygit"
+brew "oh-my-posh"
+brew "stow"
+brew "tmux"
+brew "zoxide"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-completions"
+brew "zsh-fast-syntax-highlighting"
+
+# Bun
+# ref: https://github.com/oven-sh/bun
+tap "oven-sh/bun"
+brew "oven-sh/bun/bun"
+
+# Fonts
+cask "font-fira-code-nerd-font"
+
+# Casks
+cask "1password"
+cask "adguard"
+cask "cleanmymac"
+cask "cleanshot"
+cask "deepl"
+cask "docker"
+cask "ghostty"
+cask "macs-fan-control"
+cask "microsoft-teams"
+cask "pixelsnap"
+cask "proton-mail"
+cask "protonvpn"
+cask "spotify"
+cask "telegram"
+cask "visual-studio-code"
+cask "zen-browser"
+
+# App Store
+brew "mas"
+mas "1Password for Safari", id: 1569813296
+mas "Magnet", id: 441258766
+mas "Peek — A Quick Look Extension", id: 1554235898
+mas "WireGuard", id: 1451685025
