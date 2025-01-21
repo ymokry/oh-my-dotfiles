@@ -8,8 +8,10 @@ defaults write com.apple.dock orientation -string right
 defaults write com.apple.dock tilesize -int 36
 # Set dock auto hide
 defaults write com.apple.dock autohide -bool true
-# Show recently used apps
+# Hide recently used apps
 defaults write com.apple.dock show-recents -bool false
+# Minimize to app icon
+defaults write com.apple.dock minimize-to-application -bool true
 # Restart dock to apply changes
 killall Dock
 
@@ -27,8 +29,18 @@ defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Save new documents to disk
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# Set #HOME as a target for new Finder window
+defaults write com.apple.finder NewWindowTarget -string PfHm
+defaults write com.apple.finder NewWindowTargetPath -string file://${HOME}
 # Hide all icons on desktop
 defaults write com.apple.finder CreateDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+# Disable tags
+defaults write com.apple.finder ShowRecentTags -bool false
+defaults write com.apple.finder FXTagsInSidebarSuppressionValue -bool true
 # Restart finder to apply changes
 killall Finder
 
