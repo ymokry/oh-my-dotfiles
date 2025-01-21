@@ -55,6 +55,7 @@ user=(
 
 # GUI app configs
 gui=(
+    background
     ghostty
 )
 
