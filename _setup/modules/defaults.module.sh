@@ -50,6 +50,8 @@ defaults write com.apple.HIToolbox AppleFnUsageType -int 0
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 # Enable moving focus with Tab and Shift Tab
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+# Enable moving windows with Ctrl + Cmd pressed
+defaults write -g NSWindowShouldDragOnGesture -bool true
 
 # Enable click by tap
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
