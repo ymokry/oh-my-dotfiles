@@ -30,6 +30,7 @@ version = 3
     [[blocks.segments]]
         style = "diamond"
         trailing_diamond = ""
+        leading_diamond = "<transparent,background></>"
         foreground = "p:foreground"
         background = "p:segment2"
         type = "path"
@@ -41,6 +42,7 @@ version = 3
     [[blocks.segments]]
         style = "diamond"
         trailing_diamond = ""
+        leading_diamond = "<transparent,background></>"
         foreground = "p:foreground"
         background = "p:segment3"
         type = "git"
@@ -55,6 +57,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -63,6 +66,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -71,6 +75,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -79,6 +84,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -87,6 +93,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -95,6 +102,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -103,6 +111,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -111,6 +120,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -119,6 +129,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -127,6 +138,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -135,6 +147,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
@@ -143,6 +156,7 @@ version = 3
 
     [[blocks.segments]]
         style = "diamond"
+        trailing_diamond = "<transparent,background></>"
         leading_diamond = ""
         foreground = "p:foreground"
         background = "p:segment2"
