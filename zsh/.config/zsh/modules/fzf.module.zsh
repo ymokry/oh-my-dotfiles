@@ -62,10 +62,10 @@ function _init_fzf() {
             shift
 
             case "$command" in
-                cd)           fzf --preview 'eza --tree --color=always {} | head -200'      "$@" ;;
-                export|unset) fzf --preview "eval 'echo \$'{}"                              "$@" ;;
-                ssh)          fzf --preview 'dig {}'                                        "$@" ;;
-                *)            fzf --preview '$show_file_or_dir_preview'    "$@" ;;
+                cd)           fzf --preview 'eza --tree --color=always {} | head -200'  "$@" ;;
+                export|unset) fzf --preview "eval 'echo \$'{}"                          "$@" ;;
+                ssh)          fzf --preview 'dig {}'                                    "$@" ;;
+                *)            fzf --preview "$show_file_or_dir_preview"                 "$@" ;;
             esac
         }
 
