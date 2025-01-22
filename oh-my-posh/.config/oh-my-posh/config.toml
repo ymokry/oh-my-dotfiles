@@ -8,173 +8,14 @@ version = 3
 
 [palette]
     foreground = "#C0CAF5"
-    segment1 = "#283457"
-    segment2 = "#3D59A1"
-    segment3 = "#3B4261"
+    cyan = "#27A1B9"
     red = "#FF007C"
-    cyan = "#2AC3DE"
     orange = "#FF9E64"
     green = "#1ABC9C"
 
 [[blocks]]
     type = "prompt"
     alignment = "left"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment1"
-        type = "os"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = ""
-        leading_diamond = "<transparent,background></>"
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "path"
-
-        [blocks.segments.properties]
-            style = "agnoster_short"
-            max_depth = 2
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = ""
-        leading_diamond = "<transparent,background></>"
-        foreground = "p:foreground"
-        background = "p:segment3"
-        type = "git"
-
-        [blocks.segments.properties]
-            branch_icon = " "
-
-[[blocks]]
-    type = "prompt"
-    alignment = "right"
-    overflow = "hide"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "dotnet"
-        template = "{{ if not .Error }} 󰪮 {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "go"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "java"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "kotlin"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "lua"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "node"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "php"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "python"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "ruby"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "rust"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "swift"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        trailing_diamond = "<transparent,background></>"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment2"
-        type = "zig"
-        template = "{{ if not .Error }}  {{ .Full }} {{ end }}"
-
-    [[blocks.segments]]
-        style = "diamond"
-        leading_diamond = ""
-        foreground = "p:foreground"
-        background = "p:segment1"
-        type = "project"
-        template = "{{ if .Version }}  {{.Version}} {{ end }}"
-
-[[blocks]]
-    type = "prompt"
-    alignment = "left"
-    newline = true
 
     [[blocks.segments]]
         style = "plain"
@@ -190,11 +31,32 @@ version = 3
     [[blocks.segments]]
         style = "plain"
         background = "transparent"
+        foreground = "p:foreground"
+        type = "path"
+        template = "[  {{ .Path }} ]"
+
+        [blocks.segments.properties]
+            style = "agnoster_short"
+            max_depth = 2
+
+        [[blocks.segments]]
+            style = "plain"
+            background = "transparent"
+            foreground = "p:cyan"
+            type = "git"
+            template = "[ {{ .HEAD }} ]"
+
+            [blocks.segments.properties]
+                branch_icon = " "
+
+    [[blocks.segments]]
+        style = "plain"
+        background = "transparent"
         foreground_templates = [
             "{{if eq .Code 0}}p:green{{else}}{{if ge .Code 128}}p:orange{{else}}p:red{{end}}{{end}}",
         ]
         type = "executiontime"
-        template = "{{if gt .Ms 0}} {{ .FormattedMs }}{{end}}"
+        template = "{{if gt .Ms 0}}[  {{ .FormattedMs }} ]{{end}}"
 
         [blocks.segments.properties]
             always_enabled = true
