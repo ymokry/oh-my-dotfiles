@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # Colors
 set -ogq @th_bg "#1A1B26"   # Background
 set -ogq @th_fg "#C0CAF5"   # Foreground
