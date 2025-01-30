@@ -7,8 +7,7 @@
     defaultBranch = main
 
 [core]
-    # TODO: Replace with cli editor
-    editor = code --wait
+    editor = nvim
     excludesfile = ~/.config/git/.gitignore
 
 [pull]

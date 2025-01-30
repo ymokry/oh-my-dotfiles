@@ -10,6 +10,9 @@ source $ZSH_CONFIG/.zshenv
 # may rely on brew formulae
 source $ZSH_CONFIG/modules/brew.module.zsh
 
+# Set global EDITOR and VISUAL
+source $ZSH_CONFIG/modules/editor.module.zsh
+
 # Check 'zsh' cache before other initializations
 source $ZSH_CONFIG/modules/cache.module.zsh
 
