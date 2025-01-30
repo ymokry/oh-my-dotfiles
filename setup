@@ -41,6 +41,7 @@ base=(
     bat
     bin
     lazygit
+    nvim
     oh-my-posh
     tmux
     zsh
