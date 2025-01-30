@@ -4,4 +4,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+require 'config.options'
+
 -- vim: ts=4 sts=4 sw=4 et
