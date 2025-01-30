@@ -17,6 +17,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
-require('lazy').setup 'plugins'
+require('lazy').setup {
+    spec = { { import = 'plugins' } },
+    -- Colorscheme that will be used when installing plugins
+    install = { colorscheme = { 'tokyonight-night' } },
+    -- Automatically check for plugin updates
+    checker = { enabled = true },
+    -- Disable notification on change
+    change_detection = { notify = false },
+}
 
 -- vim: ts=4 sts=4 sw=4 et
