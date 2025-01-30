@@ -34,6 +34,7 @@ return {
         --  settings (table): Override the default settings passed when initializing the server.
         local servers = {
             ts_ls = {},
+            eslint = {},
             lua_ls = {
                 settings = {
                     Lua = {
@@ -50,6 +51,7 @@ return {
         -- NOTE: Extend with tools that don't require configuration
         vim.list_extend(ensure_installed, {
             'stylua', -- Lua code formatter
+            'prettier', -- JS, TS code formatter
         })
 
         -- Default bridge doesn't support external tools installation
