@@ -1,8 +1,5 @@
 return {
     'saghen/blink.cmp',
-    dependencies = {
-        'folke/lazydev.nvim',
-    },
     -- NOTE: Use a release tag to download pre-built binaries
     version = '*',
     ---@module 'blink.cmp'
