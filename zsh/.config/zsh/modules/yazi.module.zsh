@@ -1,7 +1,7 @@
 function _init_yazi {
     if (( $+commands[yazi] )); then
         # Install packages if missing
-        if [ ! -f "$XDG_CONFIG_HOME/yazi/plugins" ]; then
+        if [ ! -d "$XDG_CONFIG_HOME/yazi/plugins" ]; then
             ya pack -i
         fi
 
