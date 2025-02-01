@@ -47,6 +47,7 @@ zsh-defer source $ZSH_CONFIG/modules/fnm.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/zoxide.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/bun.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/bat.module.zsh
+zsh-defer source $ZSH_CONFIG/modules/yazi.module.zsh
 
 # Do suggestions and syntax highlighting
 # when there's nothing else to be done
