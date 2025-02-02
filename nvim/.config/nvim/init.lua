@@ -7,6 +7,7 @@ vim.g.maplocalleader = ' '
 require 'config.options'
 require 'config.keymaps'
 require 'config.autocommands'
+require 'config.misc'
 require 'config.lazy'
 
 -- vim: ts=4 sts=4 sw=4 et
