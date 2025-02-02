@@ -44,8 +44,8 @@ get_host_name() {
     local host=$(get_host)
 
     case "$host" in
-    mac) echo "machine" ;;
-    rpi) echo "satellite" ;;
+    mac) echo "Machine" ;;
+    rpi) echo "Satellite" ;;
     *) err "Unknown host detected" ;;
     esac
 }
