@@ -13,16 +13,20 @@ err() {
 
 keep_sudo_active() {
     sudo -v
-    while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+    while true; do
+        sudo -n true
+        sleep 60
+        kill -0 "$$" || exit
+    done 2>/dev/null &
 }
 
 get_host() {
     local os=$(uname)
 
     case "$os" in
-        Darwin)     echo "mac"                  ;;
-        Linux)      echo "rpi"                  ;;
-        *)          err "Unknown host detected" ;;
+    Darwin) echo "mac" ;;
+    Linux) echo "rpi" ;;
+    *) err "Unknown host detected" ;;
     esac
 }
 
@@ -30,9 +34,19 @@ get_package_manager() {
     local host=$(get_host)
 
     case "$host" in
-        mac)    echo "brew"                 ;;
-        rpi)    echo "apt"                  ;;
-        *)      err "Unknown host detected" ;;
+    mac) echo "brew" ;;
+    rpi) echo "apt" ;;
+    *) err "Unknown host detected" ;;
+    esac
+}
+
+get_host_name() {
+    local host=$(get_host)
+
+    case "$host" in
+    mac) echo "machine" ;;
+    rpi) echo "satellite" ;;
+    *) err "Unknown host detected" ;;
     esac
 }
 

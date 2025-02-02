@@ -68,17 +68,22 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCorner
 
 # Enable FireVault if not enabled by default
 if [ "$(fdesetup isactive)" != "true" ]; then
-  sudo fdesetup enable $(id -un)
+    sudo fdesetup enable $(id -un)
 fi
 
 # Enable firewall in stealth mode
 if ! sudo /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate | grep "enabled" &>/dev/null; then
-  sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 fi
 
 # Enable stealth mode
 if ! sudo /usr/libexec/ApplicationFirewall/socketfilterfw --getstealthmode | grep "on" &>/dev/null; then
-  sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 fi
+
+# Change HOST name
+sudo scutil --set ComputerName $(get_host_name)
+sudo scutil --set HostName $(get_host_name)
+sudo scutil --set LocalHostName $(get_host_name)
 
 say "OS configuration is finished. Note that some of these changes require a logout/restart to take effect"
