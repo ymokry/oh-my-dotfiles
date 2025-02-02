@@ -57,7 +57,7 @@ user=(
 
 # GUI app configs
 gui=(
-    background
+    assets
     ghostty
 )
 
