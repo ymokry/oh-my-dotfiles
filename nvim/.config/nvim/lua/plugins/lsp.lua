@@ -44,6 +44,14 @@ return {
                     },
                 },
             },
+            jsonls = {},
+            yamlls = {},
+            rust_analyzer = {},
+            bashls = {},
+            gopls = {},
+            html = {},
+            cssls = {},
+            emmet_language_server = {},
         }
 
         -- A list of servers and tools to automatically install if they're not already installed
@@ -51,6 +59,8 @@ return {
         -- NOTE: Extend with tools that don't require configuration
         vim.list_extend(ensure_installed, {
             'stylua', -- Lua code formatter
+            'shfmt', -- Shell, Bash formatter
+            'gofumpt', -- Go formatter
             'prettier', -- JS, TS code formatter
         })
 

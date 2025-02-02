@@ -26,8 +26,20 @@ return {
         },
         -- Define your formatters
         formatters_by_ft = {
-            lua = { 'stylua' },
-            javascript = { 'prettier' },
+            lua = { 'stylua', stop_after_first = true },
+            rust = { 'rustfmt', stop_after_first = true },
+            javascript = { 'prettier', stop_after_first = true },
+            javascriptreact = { 'prettier', stop_after_first = true },
+            typescript = { 'prettier', stop_after_first = true },
+            typescriptreact = { 'prettier', stop_after_first = true },
+            css = { 'prettier', stop_after_first = true },
+            html = { 'prettier', stop_after_first = true },
+            json = { 'prettier', stop_after_first = true },
+            yaml = { 'prettier', stop_after_first = true },
+            markdown = { 'prettier', stop_after_first = true },
+            shell = { 'shfmt', stop_after_first = true },
+            bash = { 'shfmt', stop_after_first = true },
+            go = { 'gofumpt', stop_after_first = true },
         },
     },
 }
