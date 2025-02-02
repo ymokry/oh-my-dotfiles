@@ -7,6 +7,13 @@ function _init_fnm() {
         if ! type _fnm >/dev/null 2>&1; then
             eval "$(fnm completions --shell zsh)"
         fi
+
+        # Check `node` installation
+        if ! command -v node; then
+            local default_node_version=22
+
+            fnm install $default_node_version
+        fi
     fi
     unfunction _init_fnm
 }
