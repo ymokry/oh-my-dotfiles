@@ -54,3 +54,9 @@ cask "protonvpn"
 cask "spotify"
 cask "telegram"
 cask "zen-browser"
+
+# App store
+brew "mas"
+mas "1Password for Safari", id: 1569813296
+mas "Magnet", id: 441258766
+mas "WireGuard", id: 1451685025
