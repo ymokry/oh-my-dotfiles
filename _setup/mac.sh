@@ -3,6 +3,8 @@ _setup() {
 
     say "Setting up fresh macOS installation"
 
+    # Check $HOME directories
+    source $SETUP_MODULES/home.module.sh
     # Install 'xcode-select'
     source $SETUP_MODULES/xcode.module.sh
     # Initializing git for dotfiles repository
