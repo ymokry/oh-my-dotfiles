@@ -3,7 +3,7 @@
 OMD_REPOSITORY="oh-my-dotfiles"
 OMD_REPOSITORY_BRANCH="main"
 OMD_REPOSITORY_ARCHIVE="/tmp/dotfiles.zip"
-OMD_INSTALLATION="${XDG_CONFIG_HOME:-$HOME/.config}/$OMD_REPOSITORY";
+OMD_INSTALLATION="${XDG_CONFIG_HOME:-$HOME/.config}/$OMD_REPOSITORY"
 
 # Check installation directory
 if [ ! -d "$OMD_INSTALLATION" ]; then
