@@ -19,9 +19,7 @@ return {
             require('mini.surround').setup()
 
             -- Minimal and fast autopairs
-            require('mini.pairs').setup {
-                modes = { insert = true, command = true },
-            }
+            require('mini.pairs').setup()
 
             -- Simple and easy statusline.
             local statusline = require 'mini.statusline'
