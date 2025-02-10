@@ -1,6 +1,7 @@
 return {
     'saghen/blink.cmp',
     -- NOTE: Use a release tag to download pre-built binaries
+    event = { 'BufReadPost', 'BufNewFile', 'BufWritePre', 'CmdlineEnter' },
     version = '*',
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config

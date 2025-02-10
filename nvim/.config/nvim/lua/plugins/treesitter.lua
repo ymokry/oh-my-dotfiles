@@ -1,6 +1,7 @@
 return {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
     build = ':TSUpdate',
     -- Sets main module to use for opts
     main = 'nvim-treesitter.configs',

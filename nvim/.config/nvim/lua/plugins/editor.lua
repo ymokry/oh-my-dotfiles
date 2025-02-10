@@ -1,6 +1,9 @@
 return {
     -- Detect tabstop and shiftwidth automatically
-    'tpope/vim-sleuth',
+    {
+        'tpope/vim-sleuth',
+        event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
+    },
     -- Useful plugin to show you pending keybinds.
     {
         'folke/which-key.nvim',
@@ -31,14 +34,14 @@ return {
     -- Highlight todo, notes, etc in comments
     {
         'folke/todo-comments.nvim',
-        event = 'VimEnter',
+        event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
         dependencies = { 'nvim-lua/plenary.nvim' },
         opts = { signs = false },
     },
     -- File explorer
     {
         'stevearc/oil.nvim',
-        lazy = false,
+        event = 'VeryLazy',
         dependencies = {
             'nvim-tree/nvim-web-devicons',
         },

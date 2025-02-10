@@ -1,5 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
+    event = { 'BufReadPost', 'BufNewFile', 'BufWritePre', 'CmdlineEnter' },
     dependencies = {
         -- Autoconfigure `lua_ls` and other stuff
         {
