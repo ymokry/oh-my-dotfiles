@@ -4,32 +4,51 @@ return {
         'tpope/vim-sleuth',
         event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
     },
-    -- Useful plugin to show you pending keybinds.
+    -- Adds git related signs to the gutter, as well as utilities for managing changes
     {
-        'folke/which-key.nvim',
-        -- Sets the loading event to 'VimEnter'
-        event = 'VimEnter',
+        'lewis6991/gitsigns.nvim',
+        event = { 'BufReadPost', 'BufNewFile', 'BufWritePre' },
         opts = {
-            -- Delay between pressing a key and opening which-key (milliseconds)
-            -- this setting is independent of vim.opt.timeoutlen
-            delay = 0,
-            icons = {
-                -- Set icon mappings to true if Nerd Font is installed
-                mappings = true,
-                -- Set to empty table to use defaulf Nerd Font icons
-                keys = {},
-            },
-            -- Document existing key chains
-            spec = {
-                { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-                { '<leader>d', group = '[D]ocument' },
-                { '<leader>r', group = '[R]ename' },
-                { '<leader>s', group = '[S]earch' },
-                { '<leader>w', group = '[W]orkspace' },
-                { '<leader>t', group = '[T]oggle' },
-                { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+            signs = {
+                add = { text = '+' },
+                change = { text = '~' },
+                delete = { text = '_' },
+                topdelete = { text = '‾' },
+                changedelete = { text = '~' },
             },
         },
+    },
+    -- Better Around/Inside textobjects
+    --
+    -- Examples:
+    --  - va)  - [V]isually select [A]round [)]paren
+    --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
+    --  - ci'  - [C]hange [I]nside [']quote
+    {
+        'echasnovski/mini.ai',
+        version = false,
+        event = 'VeryLazy',
+        opts = {
+            n_lines = 500,
+        },
+    },
+    -- Add/delete/replace surroundings (brackets, quotes, etc.)
+    --
+    -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
+    -- - sd'   - [S]urround [D]elete [']quotes
+    -- - sr)'  - [S]urround [R]eplace [)] [']
+    {
+        'echasnovski/mini.surround',
+        version = false,
+        event = 'VeryLazy',
+        opts = {},
+    },
+    -- Minimal and fast autopairs
+    {
+        'echasnovski/mini.pairs',
+        version = false,
+        event = 'VeryLazy',
+        opts = {},
     },
     -- Highlight todo, notes, etc in comments
     {
