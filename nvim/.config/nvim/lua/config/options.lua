@@ -58,4 +58,7 @@ vim.wo.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor
 vim.o.scrolloff = 10
 
+-- Enable term colors
+vim.o.termguicolors = true
+
 -- vim: ts=4 sts=4 sw=4 et
