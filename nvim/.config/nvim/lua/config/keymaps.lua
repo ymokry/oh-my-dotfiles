@@ -18,10 +18,13 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- Keep cursor centered wnen navigatin search results
 vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'n', 'Nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Raplace selected region preserving the clipboard
 vim.keymap.set('x', '<leader>p', '"_dP')
+
+-- Delete single character without copying into register
+vim.keymap.set('n', 'x', '"_x')
 
 -- Delete preserving the clipboard content
 vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d')
@@ -38,5 +41,14 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the bottom window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the top window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+
+-- Stay in indent mode
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
+-- Buffers
+vim.keymap.set('n', '<Tab>', ':bnext<CR>')
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>')
+vim.keymap.set('n', '<leader>x', ':Bdelete!<CR>')
 
 -- vim: ts=4 sts=4 sw=4 et
