@@ -48,6 +48,30 @@ return {
             end
         end,
     },
+    -- File explorer
+    {
+        'echasnovski/mini.files',
+        version = false,
+        event = 'VeryLazy',
+        opts = {
+            windows = {
+                -- Maximum number of windows to show side by side
+                max_number = 5,
+                -- Whether to show preview of file/directory under cursor
+                preview = true,
+                -- Width of focused window
+                width_focus = 25,
+                -- Width of non-focused window
+                width_nofocus = 20,
+                -- Width of preview window
+                width_preview = 50,
+            },
+        },
+        config = function()
+            local files = require 'mini.files'
+            vim.keymap.set('n', '<leader>e', files.open, { desc = 'Open File [E]xplorer' })
+        end,
+    },
 }
 
 -- vim: ts=4 sts=4 sw=4 et

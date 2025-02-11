@@ -38,15 +38,6 @@ return {
         dependencies = { 'nvim-lua/plenary.nvim' },
         opts = { signs = false },
     },
-    -- File explorer
-    {
-        'stevearc/oil.nvim',
-        event = 'VeryLazy',
-        dependencies = {
-            'nvim-tree/nvim-web-devicons',
-        },
-        opts = {},
-    },
 }
 
 -- vim: ts=4 sts=4 sw=4 et
