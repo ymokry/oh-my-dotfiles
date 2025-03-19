@@ -47,8 +47,8 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
 -- Buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>')
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>')
-vim.keymap.set('n', '<leader>x', ':Bdelete!<CR>')
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { silent = true })
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { silent = true })
+vim.keymap.set('n', '<leader>x', ':bdelete!<CR>', { silent = true })
 
 -- vim: ts=4 sts=4 sw=4 et
