@@ -50,13 +50,13 @@ base=(
 
 # Local user
 user=(
-    brew
     git
 )
 
 # GUI app configs
 gui=(
     assets
+    brew
     ghostty
     ssh
 )
