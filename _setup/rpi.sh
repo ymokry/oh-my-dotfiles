@@ -1,5 +1,14 @@
 _setup() {
-    err "RPI setup is not yet implemented"
+    SETUP_MODULES="$OMD/_setup/modules"
+
+    say "Setting up fresh RPi installation"
+
+    # Check $HOME directories
+    source $SETUP_MODULES/home.module.sh
+    # Initializing git for dotfiles repository
+    source $SETUP_MODULES/git.module.sh
+
+    say "RPi setup is finished"
 }
 
 _setup
