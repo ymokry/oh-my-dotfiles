@@ -52,13 +52,13 @@ base=(
 user=(
     brew
     git
-    ssh
 )
 
 # GUI app configs
 gui=(
     assets
     ghostty
+    ssh
 )
 
 say "Linking configs for '$USER'"
