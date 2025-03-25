@@ -27,7 +27,6 @@ brew "tmux"
 brew "yazi"
 brew "zoxide"
 brew "zsh"
-brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-fast-syntax-highlighting"
 
