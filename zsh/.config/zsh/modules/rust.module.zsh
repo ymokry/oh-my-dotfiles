@@ -1,7 +1,11 @@
 function _init_rust {
-    if (( $+commands[rustup] )); then
-        # Add `rustup` modules to PATH
-        PATH="$HOMEBREW_PREFIX/opt/rustup/bin:$PATH"
+    local rust_path="$HOME/.local/rust"
+
+    export CARGO_HOME="$rust_path/cargo"
+    export RUSTUP_HOME="$rust_path/rustup"
+
+    if [ -d "$CARGO_HOME" ]; then
+        source $CARGO_HOME/env
     fi
 
     unfunction _init_rust
