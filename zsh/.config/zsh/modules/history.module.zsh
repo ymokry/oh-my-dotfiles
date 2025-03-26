@@ -20,4 +20,4 @@ setopt hist_save_no_dups
 setopt hist_find_no_dups
 
 # Less history
-LESSHISTFILE="$XDG_CACHE_HOME/zsh/.lesshst"
+export LESSHISTFILE="$XDG_CACHE_HOME/zsh/.lesshst"
