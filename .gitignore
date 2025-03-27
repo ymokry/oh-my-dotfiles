@@ -1,5 +1,7 @@
 # Secret part of global ENVs
 .secret.zshenv
+# Platform specific zsh config
+override.zsh
 
 # Managed by 'tmp'
 tmux/.config/tmux/plugins/

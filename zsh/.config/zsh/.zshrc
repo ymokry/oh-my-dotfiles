@@ -52,6 +52,9 @@ zsh-defer source $ZSH_CONFIG/modules/rust.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/go.module.zsh
 zsh-defer source $ZSH_CONFIG/modules/docker.module.zsh
 
+# Make platform specific overrides
+zsh-defer source $ZSH_CONFIG/modules/override.module.zsh
+
 # Do suggestions and syntax highlighting
 # when there's nothing else to be done
 zsh-defer source $ZSH_CONFIG/modules/auto-suggestions.module.zsh
