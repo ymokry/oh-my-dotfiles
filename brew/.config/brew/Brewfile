@@ -27,11 +27,6 @@ brew "yazi"
 brew "zoxide"
 brew "zsh"
 
-# Bun
-# ref: https://github.com/oven-sh/bun
-tap "oven-sh/bun"
-brew "oven-sh/bun/bun"
-
 # Fonts
 cask "font-fira-code-nerd-font"
 

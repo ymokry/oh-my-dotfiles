@@ -13,6 +13,8 @@ _setup() {
     source $SETUP_MODULES/brew.module.sh
     # Install 'rust'
     source $SETUP_MODULES/rust.module.sh
+    # Install 'bun'
+    source $SETUP_MODULES/bun.module.sh
     # Sync and install 'brew' dependencies
     source $SETUP_MODULES/brew-packages.module.sh
     # Configure OS defaults

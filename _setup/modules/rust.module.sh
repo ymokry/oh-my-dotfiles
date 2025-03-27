@@ -1,4 +1,4 @@
-# Sutup rust toolchain
+# Setup rust toolchain
 
 if ! command -v rustup &>/dev/null; then
     say "Installing rust"

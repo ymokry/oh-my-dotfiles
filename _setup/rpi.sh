@@ -9,6 +9,8 @@ _setup() {
     source $SETUP_MODULES/git.module.sh
     # Install 'rust'
     source $SETUP_MODULES/rust.module.sh
+    # Install 'bun'
+    source $SETUP_MODULES/bun.module.sh
 
     say "RPi setup is finished"
 }
