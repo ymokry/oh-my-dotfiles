@@ -6,3 +6,5 @@ vim.g.maplocalleader = ' '
 
 -- Bootstrap lazy.nvim, LazyVim and plugins
 require 'config.lazy'
+-- Apply custom mods
+require 'config.extras'
