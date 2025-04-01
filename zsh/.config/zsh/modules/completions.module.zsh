@@ -23,7 +23,7 @@ function _init_completions {
     zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
     # Load completions
-    autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/.zcompdump
+    autoload -Uz compinit && compinit -d "$ZDOTDIR/.zcompdump"
 
     unfunction _init_completions
 }
