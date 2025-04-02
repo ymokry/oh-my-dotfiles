@@ -58,6 +58,7 @@ gui=(
     assets
     brew
     ghostty
+    karabiner
     ssh
 )
 
