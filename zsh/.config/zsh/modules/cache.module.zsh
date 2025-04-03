@@ -1,18 +1,18 @@
 function _init_cache {
-    export ZDOTDIR="$XDG_CACHE_HOME/zsh"
+    local zsh_cache="$XDG_CACHE_HOME/zsh"
 
     # Check 'zsh' cache directory
-    if [ ! -d "$ZDOTDIR" ]; then
-        mkdir -p $ZDOTDIR
+    if [ ! -d "$zsh_cache" ]; then
+        mkdir -p $zsh_cache
     fi
 
     # Disable .zsh_sessions
     export SHELL_SESSIONS_DISABLE=1
 
     # Move completions dump to 'zsh' cache
-    zstyle ':completion:*' dumpfile "$ZDOTDIR/.zcompdump"
+    zstyle ':completion:*' dumpfile "$zsh_cache/.zcompdump"
     # Move completions cache to 'zsh' cache
-    zstyle ':completion:*' cache-path "$ZDOTDIR/.zcompcache"
+    zstyle ':completion:*' cache-path "$zsh_cache/.zcompcache"
 
     unfunction _init_cache
 }
