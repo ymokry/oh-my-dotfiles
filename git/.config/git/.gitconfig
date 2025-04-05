@@ -1,7 +1,6 @@
 [user]
     name = Yauheni Mokry
-    # TODO: Replace with generic git@
-    email = github@sl.mokry.me
+    email = git@sl.mokry.me
 
 [init]
     defaultBranch = main
