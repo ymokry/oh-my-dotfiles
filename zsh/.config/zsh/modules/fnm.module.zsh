@@ -1,5 +1,5 @@
 function _init_fnm() {
-    if (( $+commands[fnm] )); then
+    if command -v fnm &>/dev/null; then
         # Expose fnm envs
         eval "$(fnm env --use-on-cd --shell zsh)"
 

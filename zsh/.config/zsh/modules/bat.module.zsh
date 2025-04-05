@@ -1,5 +1,5 @@
 function _init_bat {
-    if (( $+commands[bat] )); then
+    if command -v bat &>/dev/null; then
         local config=$(bat --config-file)
 
         # Check if custom config exists
@@ -19,7 +19,6 @@ function _init_bat {
             bat cache --build
         fi
     fi
-
 
     unfunction _init_bat
 }

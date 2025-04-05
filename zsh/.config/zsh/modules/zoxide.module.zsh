@@ -1,5 +1,5 @@
 function _init_zoxide() {
-    if (( $+commands[zoxide] )); then
+    if command -v zoxide &>/dev/null; then
         eval "$(zoxide init --cmd cd zsh)"
     fi
     unfunction _init_zoxide

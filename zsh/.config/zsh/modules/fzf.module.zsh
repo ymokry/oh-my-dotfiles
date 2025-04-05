@@ -1,5 +1,5 @@
 function _init_fzf() {
-    if (( $+commands[fzf] )); then
+    if command -v fzf &>/dev/null; then
         # Apply 'tokyonight_night' color theme
         # https://github.com/folke/tokyonight.nvim/blob/main/extras/fzf/tokyonight_night.sh
         export FZF_DEFAULT_OPTS='
@@ -62,10 +62,10 @@ function _init_fzf() {
             shift
 
             case "$command" in
-                cd)           fzf --preview 'eza --tree --color=always {} | head -200'  "$@" ;;
-                export|unset) fzf --preview "eval 'echo \$'{}"                          "$@" ;;
-                ssh)          fzf --preview 'dig {}'                                    "$@" ;;
-                *)            fzf --preview "$show_file_or_dir_preview"                 "$@" ;;
+            cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+            export | unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
+            ssh) fzf --preview 'dig {}' "$@" ;;
+            *) fzf --preview "$show_file_or_dir_preview" "$@" ;;
             esac
         }
 
