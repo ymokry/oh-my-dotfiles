@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
 # Manager
-[manager]
+[mgr]
 syntect_theme = "~/.config/yazi/theme.tmTheme"
 cwd = { fg = "#27a1b9", bg = "#1a1b26" }
 
