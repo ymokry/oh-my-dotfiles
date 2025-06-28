@@ -5,7 +5,7 @@ return {
       tailwindcss = function(_, opts)
         opts.settings = {
           tailwindCSS = {
-            classFunctions = { 'tw', 'clsx', 'tw\\.[a-z-]+' },
+            classFunctions = { 'tv', 'tw', 'clsx', 'tw\\.[a-z-]+' },
           },
         }
       end,
