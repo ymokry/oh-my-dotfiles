@@ -1,7 +1,3 @@
-# Required for Bundle installations
-# ref: https://github.com/Homebrew/homebrew-bundle
-tap "homebrew/bundle"
-
 # Ubuntu like suggestions for unknown commands
 # ref: https://github.com/Homebrew/homebrew-command-not-found
 tap "homebrew/command-not-found"
