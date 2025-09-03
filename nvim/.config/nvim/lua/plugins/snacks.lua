@@ -10,6 +10,7 @@ return {
         },
         hidden = true,
       },
+      image = {},
     },
   },
 }
