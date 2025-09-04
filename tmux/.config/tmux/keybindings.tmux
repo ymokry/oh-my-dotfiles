@@ -23,3 +23,6 @@ bind - split-window -v -c "#{pane_current_path}"
 
 # New window in CWD
 bind c new-window -c "#{pane_current_path}"
+
+# Vi-style text selection
+bind -T copy-mode-vi v send-keys -X begin-selection
